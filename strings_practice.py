@@ -36,4 +36,4 @@ def palindrome(check):
     check = removing(check)
     return check == check[::-1]
 
-print(palindrome("Madam, I'm Adam")) 
+print(palindrome("Madam, I'm Adam"))
