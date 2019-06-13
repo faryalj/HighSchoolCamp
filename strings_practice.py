@@ -12,6 +12,28 @@ print(answer in alphabet)
 
 #short_hand
 
-short_hand = "Thank you for that! You are too sweet and kind!"
-changes = short_hand.replace("and","&") or short_hand.replace("too","2") or short_hand.replace("you","U") or short_hand.replace("four","4")
-print(changes("Thank you for that! You are too sweet and kind!"))
+def short_hand(short):
+    short = short.lower().replace("add","with").replace("&","too").replace("you","U").replace("for","4").replace("a","").replace("e","").replace("i","").replace("o","").replace("u","")
+    return(short)
+
+statement = input("Type a statement")
+short = short_hand(statement)
+print(short)
+
+#Remove_case_and_punctuation
+
+def removing(check):
+    check = check.lower().replace(" ","").replace(",","").replace(".","").replace(",","")
+    return(check)
+
+statement2 = input("Type of sentence")
+check = removing(statement2)
+print(check)
+
+#palindrome
+
+def palindrome(check):
+    check = removing(check)
+    return check == check[::-1]
+
+print(palindrome("Madam, I'm Adam")) 
